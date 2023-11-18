@@ -1,0 +1,220 @@
+{% extends 'customer/base.html' %}
+
+{% block content %}
+<div class="container mb-5">
+    <div class="row justify-content-center mt-1">
+        <div class="col-md-12 col-sm-12 p-4">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="pt-5">
+                    {% for biriyani in Biriyani %}
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <label class="form-check-label">{{ biriyani.name }}</label>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <p class="font-weight-bold pl-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ biriyani.price }} </p>
+                            </div>
+                            <div>
+                                <input type="number" min="0" max="50">
+                                <button type="submit">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                {% endfor %}
+                </div>
+
+                <div class="pt-5">
+                    {% for Juices_Shakes in Juices_Shakes %}
+                    <div class="row mt-4">
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <label class="form-check-label">{{ Juices_Shakes.name }}</label>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <p class="font-weight-bold pl-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ Juices_Shakes.price }} </p>
+                            </div>
+                            <div>
+                                <input type="number" min="0" max="50">
+                                <button type="submit">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    {% endfor %}
+                </div>
+
+                <div class="pt-5">
+                    {% for icecreams in Ice_Creams %}
+                    <div class="row mt-4">
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <label class="form-check-label">{{ icecreams.name }}</label>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <p class="font-weight-bold pl-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ icecreams.price }} </p>
+                            </div>
+                            <div>
+                                <input type="number" min="0" max="50">
+                                <button type="submit">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    {% endfor %}
+                </div>
+
+                <div class="pt-5">
+                    {% for northindian in North_Indian %}
+                    <div class="row mt-4">
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <label class="form-check-label">{{ northindian.name }}</label>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <p class="font-weight-bold pl-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ northindian.price }} </p>
+                            </div>
+                            <div>
+                                <input type="number" min="0" max="50">
+                                <button type="submit">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    {% endfor %}
+                </div>
+                <div class="pt-5">
+                    {% for dosa in  Dosa%}
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                     <label class="form-check-label">{{ dosa.name }}</label>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <p class="font-weight-bold pl-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ dosa.price }} </p>
+                            </div>
+                            <div>
+                            <input type="number" min="0" max="50">
+                            <button type="submit">Add</button>
+                            </div>
+                        </div>
+                    <hr />
+                {% endfor %}
+                </div>
+                <div class="pt-5">
+                    {% for arabic in Arabic %}
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <label class="form-check-label">{{ arabic.name }}</label>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <p class="font-weight-bold pl-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ arabic.price }} </p>
+                            </div>
+                            <div>
+                                <input type="number" min="0" max="50">
+                                <button type="submit">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                {% endfor %}
+                </div>
+                <div class="pt-5">
+                    {% for cakesbakery in Cakes_Bakery %}
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <label class="form-check-label">{{ cakesbakery.name }}&nbsp;</label>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <p class="font-weight-bold pl-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ cakesbakery.price }} </p>
+                            </div>
+                            <div>
+                                <input type="number" min="0" max="50">
+                                <button type="submit">Add</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <hr />
+                {% endfor %}
+                </div>
+                <div class="pt-5">
+                    {% for chinese in Chinese %}
+                    <div class="row">
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                     <label class="form-check-label">{{ chinese.name }}</label></p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <p class="font-weight-bold pl-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ chinese.price }} </p>
+                            </div>
+                            <div>
+                                <input type="number" min="0" max="50">
+                                <button type="submit">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                {% endfor %}
+                </div>
+                <div class ="form_group pt=3">
+                    <label for="name"> Full name</label>
+                    <input require class="form-control" type = "text" placeholder="Your Name" name="name">
+                </div>
+                <div class ="form_group pt=3">
+                    <label for="name"> Email</label>
+                    <input require class="form-control" type = "text" placeholder="example@email.com" name="email">
+                </div>
+                
+                <div class ="form_group pt=3">
+                    <label for="name"> Street</label>
+                    <input require class="form-control" type = "text" placeholder="Street Name" name="street name">
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class ="form_group pt=3">
+                            <label for="name"> City</label>
+                            <input require class="form-control" type = "text" placeholder="City" name="City">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class ="form_group pt=3">
+                            <label for="name"> State</label>
+                            <input require class="form-control" type = "text" placeholder="State" name="State">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <div class ="form_group pt=3">
+                            <label for="name"> Zip Code></label>
+                            <input required class="form-control" type = "text" placeholder="Zip Code" name="Zip Code">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit">Place Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
